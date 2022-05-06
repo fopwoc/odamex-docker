@@ -1,5 +1,7 @@
 FROM debian:stable-slim
 
+LABEL MAINTAINER "Ilya Dobryakov <aspirin@govno.tech>"
+
 RUN apt-get update && apt-get -y upgrade && \
     apt-get install -y curl libwxgtk3.0-gtk3-dev deutex zlib1g-dev libasound2-dev cmake build-essential && \
     rm -rf /var/lib/apt/lists/* && \
