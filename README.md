@@ -9,7 +9,7 @@ version: '3'
 
 services:
   odamex-server:
-    image: aspirinmoe/odamex-docker:latest
+    image: acetylsalicylicacid/odamex-docker:latest
     volumes:
       - /path/to/data:/doom/.odamex
     ports:
@@ -21,6 +21,6 @@ services:
 ```shell
 docker run -d \
    -v "/path/to/data:/home/doom/.odamex" \
-   aspirinmoe/odamex-docker:latest \
+   acetylsalicylicacid/odamex-docker:latest \
    --entrypoint "/usr/bin/odasrv -config /doom/.odamex/odasrv.cfg -file example.wad example2.wad"
 ```
