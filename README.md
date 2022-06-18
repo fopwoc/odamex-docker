@@ -1,7 +1,11 @@
 # odamex-docker
+
+[![Build](https://github.com/AcetylsalicylicAcid/odamex-docker/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/AcetylsalicylicAcid/odamex-docker/actions/workflows/docker-publish.yml)
+
 `odasrv` in docker.
 
 ### docker-compose
+
 I recommend you to use it in docker compose. Here is example. `/path/to/data` folder with all your wads and config. Logs by default also will be in this folder. `odasrv` config examples you can get [here](https://github.com/odamex/odamex/tree/stable/config-samples).
 
 ```yaml
@@ -18,9 +22,11 @@ services:
 ```
 
 ### docker run
+
 ```shell
 docker run -d \
    -v "/path/to/data:/home/doom/.odamex" \
    acetylsalicylicacid/odamex-docker:latest \
    --entrypoint "/usr/bin/odasrv -config /doom/.odamex/odasrv.cfg -file example.wad example2.wad"
 ```
+
