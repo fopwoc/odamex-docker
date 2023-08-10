@@ -5,7 +5,7 @@ LABEL MAINTAINER="Ilya Dobryakov <ilya.dobryakov@icloud.com>"
 RUN apt-get update && apt-get -y upgrade && \
     apt-get install -y curl libwxgtk3.0-gtk3-dev deutex zlib1g-dev libasound2-dev cmake build-essential && \
     rm -rf /var/lib/apt/lists/* && \
-    curl -LJO "https://github.com/odamex/odamex/releases/download/10.3.0/odamex-src-10.3.0.tar.gz" && \
+    curl -LJO "https://github.com/odamex/odamex/releases/download/10.4.0/odamex-src-10.4.0.tar.gz" && \
     tar -zxvf odamex-*.tar.gz && \
     cd odamex-* && \
     cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr . && \
