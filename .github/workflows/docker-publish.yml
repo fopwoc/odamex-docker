@@ -11,12 +11,6 @@ jobs:
   push_to_registries:
     name: Push Docker images
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: true
-      matrix:
-        platform:
-          - linux/amd64
-          - linux/arm64
     permissions:
       packages: write
       contents: read
@@ -50,7 +44,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          platforms: ${{ matrix.platform }}
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
