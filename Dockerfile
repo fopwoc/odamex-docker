@@ -1,8 +1,8 @@
-FROM ubuntu:jammy
+FROM ubuntu:noble
 
 LABEL MAINTAINER="Ilya Dobryakov <ilya.dobryakov@icloud.com>"
 
-ENV VERSION=10.6.0
+ENV VERSION=11.0.0
 
 RUN apt-get update && apt-get -y upgrade && \
     apt-get install -y curl libwxgtk3.0-gtk3-dev deutex zlib1g-dev libasound2-dev cmake build-essential && \
