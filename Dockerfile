@@ -5,7 +5,7 @@ LABEL MAINTAINER="Ilya Dobryakov <ilya.dobryakov@icloud.com>"
 ENV VERSION=11.2.0
 
 RUN apt-get update && apt-get -y upgrade && \
-    apt-get install -y curl libwxgtk3.2-dev deutex zlib1g-dev libasound2-dev cmake build-essential git && \
+    apt-get install -y curl libwxgtk3.2-dev deutex zlib1g-dev libasound2-dev cmake build-essential git zstd && \
     rm -rf /var/lib/apt/lists/* && \
     curl -LJO "https://github.com/odamex/odamex/releases/download/${VERSION}/odamex-src-${VERSION}.tar.gz" && \
     tar -zxvf odamex-*.tar.gz && \
